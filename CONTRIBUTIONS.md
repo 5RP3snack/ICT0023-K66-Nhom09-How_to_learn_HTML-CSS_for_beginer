@@ -8,6 +8,6 @@
 | STT | Họ và Tên | Tài khoản GitHub | Vai trò | Nhiệm theo issues |
 | :-- | :--- | :--- | :--- | :--- |
 | 1 | Trần Ngọc Sơn | @5RP3snack | Nhóm trưởng | Theo dõi tiến độ #1 mục 'Son-task' |
-| 2 | Lềm Việt Thành | @thanhdrake07-art | Thành viên | Theo dõi tiến độ #1 mục 'Thanh-task' |
-| 3 | Hà Văn Khuê | @khuehvk66sptin-star | Thành viên | Theo dõi tiến độ #1 mục 'Khue-task' |
-| 3 | Tòng Duy Anh | @anhtdk66sptin-beep | Thành viên | Theo dõi tiến độ #1 mục 'D.Anh-task' |
+| 2 | Lềm Việt Thành | @thanhdrake07-art | Thành viên | Theo dõi tiến độ #2 mục 'Thanh-task' |
+| 3 | Hà Văn Khuê | @khuehvk66sptin-star | Thành viên | Theo dõi tiến độ #3 mục 'Khue-task' |
+| 3 | Tòng Duy Anh | @anhtdk66sptin-beep | Thành viên | Theo dõi tiến độ #4 mục 'D.Anh-task' |
