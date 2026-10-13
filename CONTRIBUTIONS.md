@@ -1,4 +1,4 @@
-# ICT0023-K66-NhomXX-TenChuDe
+# ICT0023-K66-Nhom09-Website tự học HTML/CSS cho người mới
 
 * **Link GitHub Pages:** [https://5rp3snack.github.io/ICT0023-K66-Nhom09-How_to_learn_HTML-CSS_for_beginer/]
 * **Tên chủ đề:** Website tự học HTML/CSS cho người mới
