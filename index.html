@@ -1,54 +1,187 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Học HTML và CSS cho người mới">
-  <title>Trang chủ | Learn Web - LVV UTB</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" >
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Bỏ qua menu đến nội dung chính</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo-container">
-        <img class="logo" src="images/logo.jpg" alt="Learn Web - LVV UTB" width="48" height="48">
-        <a class="site-logo" href="index.html" aria-label="Learn Web - LVV UTB, về trang chủ">Learn Web.<span>LVV UTB</span></a>
-      </div>
-        <nav class="site-nav" aria-label="Điều hướng chính">
-        <ul class="nav nav-list"><li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Trang chủ</a></li>
-        <li class="nav-item"><a class="nav-link" href="lessons.html">Lộ trình học</a></li>
-        <li class="nav-item"><a class="nav-link" href="library.html">Thư viện mã</a></li>
-        <li class="nav-item"><a class="nav-link" href="playground.html">Thực hành</a></li>
-        <li class="nav-item"><a class="nav-link" href="quiz.html">Ôn tập & FAQ</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li></ul>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Học HTML và CSS cho người mới" name="description">
+    <title>Trang chủ | Learn Web - LVV UTB</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="page-index">
+    <a class="skip-link" href="#main-content">Bỏ qua menu đến nội dung chính</a>
+    <header class="site-header">
+      <nav aria-label="Điều hướng chính" class="navbar navbar-expand-lg">
+        <div class="container">
+          <a aria-label="Learn Web – LVV UTB, về trang chủ" class="navbar-brand" href="index.html"><img alt="Logo Learn Web" class="brand-icon" src="images/logo.jpg" style="border-radius: 50%;"><span class="brand-name">Learn Web <small>LVV UTB</small></span></a>
+          <button aria-controls="primaryNav" aria-expanded="false" aria-label="Mở hoặc đóng menu" class="navbar-toggler" data-bs-target="#primaryNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="primaryNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Trang chủ</a></li>
+              <li class="nav-item"><a class="nav-link" href="lessons.html">Lộ trình học</a></li>
+              <li class="nav-item"><a class="nav-link" href="library.html">Thư viện mã</a></li>
+              <li class="nav-item"><a class="nav-link" href="playground.html">Thực hành</a></li>
+              <li class="nav-item"><a class="nav-link" href="quiz.html">Ôn tập &amp; FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </div>
-  </header>
-  <main id="main-content" class="site-main">
-    <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Nền tảng tự học HTML & CSS</p>
-        <h1>Học lập trình web từ những dòng code đầu tiên</h1>
-        <p>Learn Web – LVV UTB giúp bạn học kiến thức nền tảng, đọc ví dụ và tự thực hành trên trình duyệt theo từng bước đơn giản.</p>
-        <p><a class="btn btn-primary" href="lessons.html">Khám phá lộ trình học</a>
+    </header>
+    <main class="site-main" id="main-content">
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow">Nền tảng tự học HTML &amp; CSS</p>
+          <h1>Học lập trình web từ những dòng code đầu tiên</h1>
+          <p>Learn Web – LVV UTB giúp bạn học kiến thức nền tảng, đọc ví dụ và tự thực hành trên trình duyệt theo từng bước đơn giản.</p>
+          <p>
+            <a class="btn btn-primary" href="lessons.html">Khám phá lộ trình học</a>
             <a class="btn btn-outline-primary" href="playground.html">Đến khu thực hành</a>
-        </p>
+            <button class="btn btn-hero-info" data-bs-target="#projectInfoModal" data-bs-toggle="modal" type="button">Về dự án</button>
+          </p>
+          <aside aria-label="Minh họa cấu trúc website" class="hero-illustration">
+            <div class="editor-head">
+              <span class="editor-dot"></span>
+              <span class="editor-dot"></span>
+              <span class="editor-dot"></span>
+              <span class="editor-filename">index.html</span>
+            </div>
+            <div class="editor-body">
+              <p><span class="line-no">01</span><span class="syntax-muted">&lt;!DOCTYPE html&gt;</span></p>
+              <p><span class="line-no">02</span><span class="syntax-blue">&lt;html&gt;</span></p>
+              <p><span class="line-no">03</span>&nbsp;&nbsp;<span class="syntax-blue">&lt;h1&gt;</span><span class="syntax-gold">Hello World!</span><span class="syntax-blue">&lt;/h1&gt;</span></p>
+              <p><span class="line-no">04</span>&nbsp;&nbsp;<span class="syntax-blue">&lt;p&gt;</span>Start learning.<span class="syntax-blue">&lt;/p&gt;</span></p>
+              <p><span class="line-no">05</span><span class="syntax-blue">&lt;/html&gt;</span></p>
+            </div>
+            <div class="editor-output">
+              <span>●</span>
+              Đầu ra: Hello World!
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="container">
+          <h2>Bạn sẽ học được gì?</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">01 · Nền tảng · Bắt đầu</p>
+                <h3>Nắm vững HTML</h3>
+                <p>Hiểu thẻ, thuộc tính, văn bản, liên kết, ảnh, danh sách, bảng và biểu mẫu.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">02 · Giao diện · Tiếp theo</p>
+                <h3>Thiết kế bằng CSS</h3>
+                <p>Sử dụng màu sắc, font chữ, box model và bố cục linh hoạt.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">03 · Ứng dụng · Cuối lộ trình</p>
+                <h3>Thực hành &amp; tự kiểm tra</h3>
+                <p>Tham khảo đoạn mã, thử nghiệm HTML/CSS và làm câu hỏi ôn tập.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="container">
+          <h2>Các chủ đề nổi bật</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H01 · HTML · Cơ bản</p>
+                <h3>HTML là gì?</h3>
+                <p>Tìm hiểu vai trò của HTML, trình duyệt và cấu trúc trang web.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H02 · HTML · Cơ bản</p>
+                <h3>Cấu trúc tài liệu HTML</h3>
+                <p>Biết cách sử dụng doctype, html, head, title và body.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H03 · HTML · Cơ bản</p>
+                <h3>Tiêu đề và đoạn văn</h3>
+                <p>Phân cấp tiêu đề h1–h6 và trình bày đoạn văn bằng p.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H04 · HTML · Cơ bản</p>
+                <h3>Liên kết và hình ảnh</h3>
+                <p>Dùng thẻ a, img cùng href, src và alt đúng mục đích.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H05 · HTML · Cơ bản</p>
+                <h3>Danh sách và bảng</h3>
+                <p>Sử dụng ul, ol, li, table, tr, th và td.</p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="content-card h-100">
+                <p class="meta">H06 · HTML · Trung bình</p>
+                <h3>Biểu mẫu HTML</h3>
+                <p>Tạo form, label, input, select, textarea và button.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="container">
+          <h2>Quy trình học đề xuất</h2>
+          <ol class="steps">
+            <li>Đọc bài học theo thứ tự cơ bản đến nâng cao.</li>
+            <li>Mở thư viện để tìm và đọc ví dụ mã.</li>
+            <li>Thử chỉnh sửa HTML/CSS trên Playground (chức năng chạy mã ở phiên bản v0.4).</li>
+            <li>Làm trắc nghiệm cuối lộ trình để tự đánh giá.</li>
+          </ol>
+          <p><a href="quiz.html">Xem câu hỏi ôn tập →</a></p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p><strong>Learn Web – LVV UTB</strong> · Website tự học HTML/CSS cho người mới.</p>
+        <nav aria-label="Liên kết chân trang" class="footer-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="lessons.html">Lộ trình học</a>
+          <a href="library.html">Thư viện mã</a>
+          <a href="playground.html">Thực hành</a>
+          <a href="quiz.html">Ôn tập &amp; FAQ</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Không thu thập hoặc lưu trữ dữ liệu cá nhân.</p>
       </div>
-    </section><section class="page-section">
-      <div class="container"><h2>Bạn sẽ học được gì?</h2>
-        <div class="row g-3"><div class="col-12 col-md-6 col-lg-4">
-          <article class="content-card h-100">
-            <p class="meta">01 · Nền tảng · Bắt đầu</p><h3>Nắm vững HTML</h3><p>Hiểu thẻ, thuộc tính, văn bản, liên kết, ảnh, danh sách, bảng và biểu mẫu.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">02 · Giao diện · Tiếp theo</p><h3>Thiết kế bằng CSS</h3><p>Sử dụng màu sắc, font chữ, box model và bố cục linh hoạt.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">03 · Ứng dụng · Cuối lộ trình</p><h3>Thực hành &amp; tự kiểm tra</h3><p>Tham khảo đoạn mã, thử nghiệm HTML/CSS và làm câu hỏi ôn tập.</p></article></div></div></div></section><section class="page-section"><div class="container"><h2>Các chủ đề nổi bật</h2><div class="row g-3"><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H01 · HTML · Cơ bản</p><h3>HTML là gì?</h3><p>Tìm hiểu vai trò của HTML, trình duyệt và cấu trúc trang web.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H02 · HTML · Cơ bản</p><h3>Cấu trúc tài liệu HTML</h3><p>Biết cách sử dụng doctype, html, head, title và body.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H03 · HTML · Cơ bản</p><h3>Tiêu đề và đoạn văn</h3><p>Phân cấp tiêu đề h1–h6 và trình bày đoạn văn bằng p.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H04 · HTML · Cơ bản</p><h3>Liên kết và hình ảnh</h3><p>Dùng thẻ a, img cùng href, src và alt đúng mục đích.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H05 · HTML · Cơ bản</p><h3>Danh sách và bảng</h3><p>Sử dụng ul, ol, li, table, tr, th và td.</p></article></div><div class="col-12 col-md-6 col-lg-4"><article class="content-card h-100"><p class="meta">H06 · HTML · Trung bình</p><h3>Biểu mẫu HTML</h3><p>Tạo form, label, input, select, textarea và button.</p></article></div></div></div></section><section class="page-section"><div class="container"><h2>Quy trình học đề xuất</h2><ol class="steps"><li>Đọc bài học theo thứ tự cơ bản đến nâng cao.</li><li>Mở thư viện để tìm và đọc ví dụ mã.</li><li>Thử chỉnh sửa HTML/CSS trên Playground (chức năng chạy mã ở phiên bản v0.4).</li><li>Làm trắc nghiệm cuối lộ trình để tự đánh giá.</li></ol><p><a href="quiz.html">Xem câu hỏi ôn tập →</a></p></div></section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>Learn Web – LVV UTB</strong> · Website tự học HTML/CSS cho người mới.</p>
-      <nav aria-label="Liên kết chân trang" class="footer-nav"><a href="index.html">Trang chủ</a> <a href="lessons.html">Lộ trình học</a> <a href="library.html">Thư viện mã</a> <a href="playground.html">Thực hành</a> <a href="quiz.html">Ôn tập & FAQ</a> <a href="contact.html">Liên hệ</a></nav>
-      <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Không thu thập hoặc lưu trữ dữ liệu cá nhân.</p>
+    </footer>
+    <div aria-hidden="true" aria-labelledby="projectInfoTitle" class="modal fade" id="projectInfoModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="projectInfoTitle">Về Learn Web – LVV UTB</h2>
+            <button aria-label="Đóng" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+          </div>
+          <div class="modal-body">
+            <p>Đây là website tự học HTML/CSS của nhóm sinh viên K66, học phần ICT0023. Nội dung được thiết kế cho người mới bắt đầu.</p>
+            <p>Trong v0.3, nhóm tập trung xây dựng giao diện. Các công cụ tương tác nâng cao sẽ có trong v0.4.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-dismiss="modal" type="button">Đã hiểu</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
