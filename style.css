@@ -1,0 +1,809 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap");
+:root {
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --accent: #7c3aed;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --canvas: #f7f9fe;
+  --line: #e2e8f0;
+  --surface: #fff;
+  --round: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  line-height: 1.75;
+  margin: 0;
+}
+a {
+  overflow-wrap: anywhere;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3 {
+  line-height: 1.35;
+  letter-spacing: -.025em;
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(1.45rem,2.2vw,2rem);
+}
+h3 {
+  font-size: 1.15rem;
+}
+p {
+  margin-bottom: 1rem;
+}
+:focus-visible {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px;
+}
+.skip-link {
+  position: fixed;
+  top: -120px;
+  left: 12px;
+  z-index: 2000;
+  background: #fff;
+  color: var(--brand);
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.skip-link:focus {
+  top: 12px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 3px 18px rgba(15,23,42,.045);
+}
+.site-header .navbar {
+  padding: 13px 0;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ink);
+  white-space: normal;
+  margin-right: 20px;
+}
+.brand-icon {
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg,var(--brand),var(--accent));
+  color: #fff;
+  border-radius: 12px;
+  width: 47px;
+  height: 47px;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px #2563eb30;
+}
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.17rem;
+  font-weight: 800;
+  line-height: 1.22;
+}
+.brand-name small {
+  font-weight: 600;
+  font-size: .66rem;
+  color: var(--muted);
+  letter-spacing: .11em;
+  margin-top: 3px;
+}
+.navbar-nav .nav-link {
+  border-radius: 9px;
+  color: #334155;
+  font-weight: 600;
+  font-size: .85rem;
+  padding: 10px 13px !important;
+  transition: background .2s,color .2s;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  background: #eff6ff;
+  color: var(--brand-dark);
+}
+.navbar-toggler {
+  border-color: var(--line);
+  padding: 7px 10px;
+}
+.hero {
+  position: relative;
+  background: radial-gradient(circle at 88% 7%,#e2e5ff 0,transparent 38%),linear-gradient(125deg,#eff6ff,#fbfcff 65%);
+  padding: clamp(55px,7vw,105px) 0 70px;
+  overflow: hidden;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr);
+  gap: clamp(20px,5vw,75px);
+  align-items: center;
+}
+.hero-inner>p {
+  grid-column: 1;
+  margin: 0 0 8px;
+}
+.hero-inner>.eyebrow {
+  align-self: end;
+}
+.hero-inner>h1 {
+  grid-column: 1;
+  font-size: clamp(2.1rem,4.3vw,3.65rem);
+  line-height: 1.18;
+  color: var(--ink);
+  margin: 3px 0 12px;
+  font-weight: 800;
+}
+.hero-inner>p:not(.eyebrow) {
+  color: #475569;
+  font-size: 1rem;
+  max-width: 570px;
+}
+.hero-inner>p:has(.btn) {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.eyebrow {
+  font-weight: 700;
+  color: var(--brand-dark);
+  font-size: .82rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.hero-illustration {
+  grid-column: 2;
+  grid-row: 1 / span 4;
+  background: #111b30;
+  box-shadow: 0 25px 60px #17255425;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: rotate(1deg);
+}
+.editor-head {
+  height: 45px;
+  background: #18263e;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-bottom: 1px solid #334155;
+}
+.editor-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f87171;
+}
+.editor-dot:nth-child(2) {
+  background: #fbbf24;
+}
+.editor-dot:nth-child(3) {
+  background: #34d399;
+}
+.editor-filename {
+  margin-left: 12px;
+  font: 500 .76rem Consolas,monospace;
+  color: #94a3b8;
+}
+.editor-body {
+  padding: 24px 14px;
+  font: clamp(.68rem,1.3vw,.93rem)/1.9 Consolas,monospace;
+  color: #e2e8f0;
+}
+.editor-body p {
+  margin: 0;
+  white-space: nowrap;
+}
+.line-no {
+  display: inline-block;
+  color: #64748b;
+  width: 30px;
+  user-select: none;
+}
+.syntax-blue {
+  color: #7dd3fc;
+}
+.syntax-gold {
+  color: #fcd34d;
+}
+.syntax-muted {
+  color: #94a3b8;
+}
+.editor-output {
+  background: #1e293b;
+  padding: 12px 17px;
+  color: #cbd5e1;
+  font-size: .8rem;
+}
+.editor-output span {
+  color: #4ade80;
+}
+.btn {
+  font-weight: 650;
+  border-radius: 10px;
+  padding: .7rem 1.05rem;
+  transition: transform .2s,box-shadow .2s;
+}
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+.btn-primary {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+.btn-primary:hover {
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+  box-shadow: 0 8px 18px #2563eb30;
+}
+.btn-outline-primary {
+  color: var(--brand-dark);
+  border-color: #a5b4fc;
+  background: white;
+}
+.btn-hero-info {
+  background: transparent;
+  color: var(--brand-dark);
+  border: 1px solid transparent;
+}
+.btn:disabled {
+  opacity: .58;
+  cursor: not-allowed;
+}
+.page-heading {
+  background: linear-gradient(125deg,#eff6ff,#f4f0ff);
+  padding: 57px 0 48px;
+  border-bottom: 1px solid #e0e7ff;
+}
+.page-heading h1 {
+  font-size: clamp(1.85rem,3vw,2.7rem);
+  margin: 0 0 12px;
+}
+.page-heading p {
+  color: #475569;
+  max-width: 790px;
+  margin: 0;
+}
+.page-section {
+  padding: 57px 0;
+}
+.page-section+.page-section {
+  padding-top: 14px;
+}
+.page-section>.container>h2 {
+  margin: 0 0 24px;
+}
+.page-section:nth-of-type(even) {
+  background: #fff;
+}
+.content-card {
+  height: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: var(--round);
+  padding: 25px;
+  box-shadow: 0 4px 15px #0f172a08;
+  transition: border-color .2s,box-shadow .2s,transform .2s;
+}
+.content-card:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 13px 30px #1e3a8a0f;
+  transform: translateY(-2px);
+}
+.content-card h3 {
+  color: #172554;
+  margin: 6px 0 10px;
+  font-size: 1.13rem;
+}
+.content-card p {
+  color: #475569;
+}
+.content-card .meta, .meta {
+  font-size: .79rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  letter-spacing: .025em;
+}
+.content-card a {
+  font-weight: 650;
+}
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 16px;
+}
+.steps li {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  padding: 23px 18px;
+}
+.steps li::before {
+  counter-increment: step;
+  content: counter(step,decimal-leading-zero);
+  display: block;
+  color: var(--brand);
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.lesson-card {
+  border-top: 4px solid #60a5fa;
+}
+.lesson-article {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: clamp(20px,3vw,36px);
+  border-radius: var(--round);
+  max-width: 960px;
+}
+.lesson-article h3 {
+  margin-top: 22px;
+}
+.lesson-article h3:first-child {
+  margin-top: 0;
+}
+.lesson-article code, .content-card code {
+  overflow-wrap: anywhere;
+}
+pre {
+  font: .88rem/1.65 Consolas,"Courier New",monospace;
+  background: #101c31;
+  color: #dbeafe;
+  border-radius: 10px;
+  padding: 19px;
+  overflow-x: auto;
+  white-space: pre;
+  max-width: 100%;
+}
+pre code {
+  color: inherit;
+}
+.snippet-card {
+  border-top: 3px solid #a5b4fc;
+}
+.snippet-card pre {
+  font-size: .79rem;
+  margin-top: 14px;
+  min-height: 75px;
+}
+.filter-form {
+  margin-top: 27px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 20px 13px;
+  box-shadow: 0 7px 24px #0f172a0c;
+}
+.form-label {
+  font-weight: 650;
+  color: #334155;
+}
+.form-control, .form-select {
+  padding: .75rem .9rem;
+  border-radius: 10px;
+  border-color: #cbd5e1;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 .2rem #2563eb17;
+}
+.form-control:disabled, .form-select:disabled {
+  background: #f1f5f9;
+}
+.form-text {
+  color: var(--muted);
+}
+.field-error {
+  color: #b91c1c;
+  font-size: .88rem;
+}
+.code-input {
+  font-family: Consolas,"Courier New",monospace;
+  line-height: 1.65;
+  background: #111c30;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+.code-input:focus {
+  background: #111c30;
+  color: #fff;
+}
+.preview-frame {
+  width: 100%;
+  height: 365px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.quiz-card {
+  height: auto;
+  padding: 25px;
+  margin-bottom: 20px !important;
+}
+.quiz-card legend {
+  float: none;
+  width: auto;
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 1.08rem;
+  margin-bottom: 16px;
+}
+.form-check {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.faq-item {
+  padding: 0;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 650;
+  padding: 18px 22px;
+  list-style-position: inside;
+}
+.faq-item[open] summary {
+  color: var(--brand);
+  background: #eff6ff;
+}
+.faq-item p {
+  padding: 15px 22px;
+  margin: 0;
+  color: #475569;
+}
+.site-footer {
+  margin-top: 15px;
+  background: #122b57;
+  color: #e2e8f0;
+  padding: 42px 0 30px;
+}
+.site-footer strong {
+  color: #fff;
+}
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 22px;
+  row-gap: 8px;
+  margin: 20px 0;
+}
+.footer-nav a {
+  color: #bfdbfe;
+  text-decoration: none;
+  font-size: .91rem;
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.site-footer .small {
+  color: #cbd5e1;
+  font-size: .8rem;
+  max-width: 900px;
+}
+.modal-content {
+  border: 0;
+  border-radius: 17px;
+  box-shadow: 0 20px 60px #0f172a30;
+}
+@media (max-width:991.98px) {
+  .site-header .navbar-collapse {
+    padding: 15px 0 6px;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-inner>p, .hero-inner>h1, .hero-illustration {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .hero-illustration {
+    max-width: 610px;
+    width: 100%;
+    transform: none;
+  }
+  .steps {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:575.98px) {
+  .hero {
+    padding: 50px 0;
+  }
+  .hero-inner>h1 {
+    font-size: 2.05rem;
+  }
+  .editor-body {
+    font-size: .63rem;
+    padding: 16px 8px;
+  }
+  .line-no {
+    width: 22px;
+  }
+  .page-heading {
+    padding: 42px 0;
+  }
+  .page-section {
+    padding: 36px 0;
+  }
+  .page-section+.page-section {
+    padding-top: 10px;
+  }
+  .content-card {
+    padding: 19px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .footer-nav {
+    gap: 11px 16px;
+  }
+  .site-header .navbar {
+    padding: 10px 0;
+  }
+  .brand-name {
+    font-size: 1.02rem;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Bài giảng kiểu W3Schools (lesson.html, lessons.html) */
+.lesson-card{position:relative}
+.lesson-card h3 a{color:inherit;text-decoration:none}
+.lesson-card h3 a:hover{color:var(--brand-dark)}
+
+.lesson-layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;align-items:start}
+
+.lesson-sidebar{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--round);
+  padding:18px 14px;box-shadow:0 4px 15px #0f172a08}
+.lesson-sidebar h2{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;
+  color:var(--brand-dark);margin:6px 8px 8px}
+.lesson-sidebar ul{list-style:none;margin:0 0 14px;padding:0}
+.lesson-sidebar a{display:block;padding:8px 12px;border-radius:9px;color:#334155;
+  text-decoration:none;font-size:.88rem;font-weight:600;overflow-wrap:normal;transition:background .2s,color .2s}
+.lesson-sidebar a:hover{background:#eff6ff;color:var(--brand-dark)}
+.lesson-sidebar a.active{background:var(--brand);color:#fff}
+
+.lesson-content{background:var(--surface);border:1px solid var(--line);border-radius:var(--round);
+  padding:clamp(20px,3vw,36px);min-width:0;box-shadow:0 4px 15px #0f172a08}
+.lesson-content h1{font-size:clamp(1.6rem,3vw,2.3rem);font-weight:800;margin:4px 0 8px}
+.lesson-content h2{font-size:1.3rem;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.lesson-content p code{background:#eff6ff;color:var(--brand-dark);padding:2px 7px;border-radius:6px;font-size:.88em}
+.lesson-content pre{margin:0 0 1.2rem}
+
+.lesson-progress{height:6px;background:var(--line);border-radius:3px;margin:10px 0 18px;overflow:hidden}
+.lesson-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--accent));border-radius:3px}
+
+.lesson-note,.lesson-exercise{padding:14px 18px;border-radius:0 12px 12px 0;margin:1.2rem 0}
+.lesson-note{border-left:4px solid var(--brand);background:#eff6ff}
+.lesson-exercise{border-left:4px solid #16a34a;background:#f0fdf4}
+
+.tryit{border:1px solid var(--line);border-radius:var(--round);overflow:hidden;margin:1rem 0 1.4rem}
+.tryit-head{background:#18263e;color:#cbd5e1;padding:11px 16px;font-size:.85rem;font-weight:600}
+.tryit-grid{display:grid;grid-template-columns:1fr 1fr}
+.tryit-grid textarea{width:100%;min-height:260px;border:0;border-right:1px solid #334155;padding:14px;
+  font:.85rem/1.65 Consolas,"Courier New",monospace;resize:vertical;background:#111c30;color:#e2e8f0}
+.tryit-grid iframe{width:100%;min-height:260px;border:0;background:#fff}
+.tryit-actions{padding:10px 16px;background:#f1f5f9;display:flex;gap:8px;border-top:1px solid var(--line)}
+.tryit-actions .btn{padding:.4rem .9rem}
+
+.lesson-nav{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:32px}
+
+@media(max-width:991.98px){
+ .lesson-layout{grid-template-columns:1fr}
+ .lesson-sidebar{position:static;max-height:240px}
+ .tryit-grid{grid-template-columns:1fr}
+ .tryit-grid textarea{border-right:0;border-bottom:1px solid #334155}
+}
+
+/* =====================================================================
+   MODERN EDUCATION LAYER  (branch D.Anh_task)
+   Chỉ GHI ĐÈ / BỔ SUNG, không xóa quy tắc cũ. Chi tiết: docs/CSS_CHANGELOG.md
+   Mục lục:
+   M1 Design tokens (biến mới)      
+   M2 Typography & cơ bản           M9  FAQ (details/summary)
+   M3 Thanh điều hướng              M10 Footer
+   M4 Hero                          M11 Trang bài giảng (lesson.html)
+   M5 Nút bấm                       M12 Responsive / Print
+   M6 Thẻ, badge, tiêu đề mục       M13 — Class MỚI
+   M7  Các khối thông báo           M14 — Điều hướng bài học trên điện thoại
+   M8  Form & trắc nghiệm
+   ===================================================================== */
+
+/* M1 — Design tokens: BIẾN MỚI (biến cũ --brand, --accent... giữ nguyên) */
+:root {
+  --sun: #f59e0b;
+  --mint: #10b981;
+  --brand-soft: #eff6ff;
+  --accent-soft: #f3e8ff;
+  --grad-brand: linear-gradient(135deg, var(--brand), var(--accent));
+  --shadow-sm: 0 2px 8px rgba(15,23,42,.06);
+  --shadow-md: 0 10px 30px rgba(30,58,138,.10);
+  --shadow-lg: 0 24px 60px rgba(30,58,138,.16);
+  --round-sm: 10px;
+  --round-lg: 24px;
+  --ease: cubic-bezier(.2,.7,.2,1);
+}
+
+/* M2 — Typography & cơ bản */
+::selection { background: #c7d2fe; color: var(--ink); }
+h1 { font-weight: 800; }
+h2 { font-weight: 800; }
+p { line-height: 1.8; }
+.page-heading { position: relative; overflow: hidden; }
+.page-heading::after {
+  content: ""; position: absolute; right: -60px; top: -80px; width: 260px; height: 260px;
+  border-radius: 50%; background: radial-gradient(circle, #c4b5fd55, transparent 65%); pointer-events: none;
+}
+.page-heading .container { position: relative; z-index: 1; }
+
+/* M3 — Thanh điều hướng: gạch chân gradient cho mục đang mở */
+.navbar-nav .nav-link { position: relative; font-size: .9rem; }
+.navbar-nav .nav-link.active { background: var(--brand-soft); }
+.navbar-nav .nav-link.active::after {
+  content: ""; position: absolute; left: 13px; right: 13px; bottom: 3px; height: 3px;
+  border-radius: 3px; background: var(--grad-brand);
+}
+
+/* M4 — Hero: đốm màu trang trí (không cần sửa HTML) + nhãn dạng viên thuốc */
+.hero::before, .hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.hero::before { width: 420px; height: 420px; right: -140px; top: -160px; background: radial-gradient(circle, #c7d2fe99, transparent 65%); }
+.hero::after  { width: 320px; height: 320px; left: -120px; bottom: -150px; background: radial-gradient(circle, #fde68a77, transparent 65%); }
+.hero-inner { position: relative; z-index: 1; }
+.hero-inner > .eyebrow {
+  justify-self: start; background: #fff; border: 1px solid #c7d2fe; border-radius: 999px;
+  padding: 5px 14px; box-shadow: var(--shadow-sm);
+}
+.hero-illustration { box-shadow: var(--shadow-lg); }
+
+/* M5 — Nút bấm */
+.btn-primary { background: var(--grad-brand); border: 1px solid transparent; box-shadow: 0 6px 16px #2563eb2e; }
+.btn-primary:hover, .btn-primary:focus-visible {
+  background: linear-gradient(135deg, var(--brand-dark), #6d28d9); border-color: transparent;
+  box-shadow: 0 10px 22px #4c1d9540;
+}
+.btn-outline-primary:hover { background: var(--brand-soft); color: var(--brand-dark); border-color: var(--brand); }
+.btn-hero-info:hover { background: #2563eb14; color: var(--brand-dark); }
+.btn-outline-secondary { border-radius: var(--round-sm); }
+
+/* M6 — Thẻ nội dung, badge cấp độ, tiêu đề mục */
+.content-card { box-shadow: var(--shadow-sm); transition: border-color .25s var(--ease), box-shadow .25s var(--ease), transform .25s var(--ease); }
+.content-card:hover { box-shadow: var(--shadow-md); }
+.content-card .meta, .meta {           /* .meta → badge dạng viên thuốc */
+  display: inline-block; background: var(--brand-soft); color: var(--brand-dark);
+  padding: 3px 11px; border-radius: 999px; margin: 0 0 6px; line-height: 1.6;
+}
+#html-lessons .lesson-card { border-top-color: var(--brand); }             /* HTML = xanh dương */
+#css-lessons  .lesson-card { border-top-color: var(--accent); }            /* CSS  = tím */
+#css-lessons  .lesson-card .meta { background: var(--accent-soft); color: #6d28d9; }
+.lesson-card p:last-of-type::after {   /* gợi ý hành động trên thẻ bài học */
+  content: "Học ngay →"; display: block; margin-top: 10px; font-size: .88rem; font-weight: 700; color: var(--brand-dark);
+}
+#css-lessons .lesson-card p:last-of-type::after { color: #6d28d9; }
+.snippet-card { border-top-color: var(--sun); }
+.page-section > .container > h2::after {  /* vạch gradient dưới tiêu đề mục */
+  content: ""; display: block; width: 56px; height: 4px; border-radius: 4px; margin-top: 10px; background: var(--grad-brand);
+}
+.steps li { box-shadow: var(--shadow-sm); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+.steps li:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.steps li::before { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* M7 — Khối thông báo: dùng lại các #id có sẵn trong HTML */
+#feedback-status, #quiz-result, #playground-message {
+  padding: 12px 16px; border-radius: 12px; background: var(--brand-soft);
+  border: 1px solid #bfdbfe; color: #1e3a8a; font-size: .92rem;
+}
+#feedback-status, #quiz-result { margin-top: 16px; }
+#snippet-empty:not([hidden]) {
+  padding: 28px; text-align: center; background: #fff; border: 2px dashed #cbd5e1; border-radius: var(--round); color: var(--muted);
+}
+
+/* M8 — Form & trắc nghiệm */
+.form-check-input:checked { background-color: var(--brand); border-color: var(--brand); }
+.form-check { border-radius: var(--round-sm); padding-right: 12px; transition: background .2s; }
+.form-check:has(input:not(:disabled)):hover { background: var(--brand-soft); }
+.form-check-label { cursor: pointer; }
+.form-check-input:disabled ~ .form-check-label { cursor: not-allowed; }
+.quiz-card:has(.form-check-input:checked) { border-color: #93c5fd; background: #f8fbff; }
+.field-error:empty { margin: 0; }
+.form-control::placeholder { color: #94a3b8; }
+
+/* M9 — FAQ: dấu +/− thay cho mũi tên mặc định */
+.faq-item { transition: border-color .2s, box-shadow .2s; }
+.faq-item[open] { border-color: #bfdbfe; box-shadow: var(--shadow-sm); }
+.faq-item summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--brand-soft); color: var(--brand-dark); font-weight: 800;
+}
+.faq-item[open] summary::after { content: "−"; background: var(--brand); color: #fff; }
+
+/* M10 — Footer */
+.site-footer { position: relative; background: linear-gradient(160deg, #122b57, #1e1b4b); }
+.site-footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--grad-brand); }
+
+/* M11 — Trang bài giảng (.lesson-*, .tryit-*) */
+.lesson-sidebar { scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent; }
+.lesson-sidebar a.active { background: var(--grad-brand); }
+.tryit { box-shadow: var(--shadow-sm); }
+.lesson-note { background: var(--brand-soft); }
+.lesson-exercise { border-left-color: var(--mint); background: #ecfdf5; }
+.lesson-nav .btn { max-width: 100%; }
+
+
+
+/* M12 — Responsive & in ấn */
+@media (max-width: 575.98px) {
+  .hero-inner > p:has(.btn) .btn { flex: 1 1 100%; }
+  .hero::before { width: 260px; height: 260px; }
+  .page-heading::after { display: none; }
+}
+@media print {
+  .site-header, .site-footer, .skip-link, .lesson-sidebar, .tryit-actions, .lesson-nav, .hero::before, .hero::after { display: none !important; }
+  .lesson-layout { display: block; }
+  .lesson-content, .content-card { border: 0; box-shadow: none; }
+  pre { white-space: pre-wrap; background: #fff; color: #000; border: 1px solid #999; }
+}
+
+/* M13 — Class MỚI: .text-gradient (dùng trong index.html, <h1> của .hero) */
+.text-gradient { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) { .text-gradient { color: var(--brand); } }
+
+/* M14 — Điều hướng bài học trên điện thoại (class MỚI: .lesson-mobilebar, .lesson-mb-*, .lesson-drawer-list; id MỚI: #lesson-drawer)
+   Tạo bằng js/lesson.js. Thay cho mục lục đặt trên đầu trang (phải lướt lên) ở màn hình < 992px. */
+.lesson-mobilebar { display: none; }
+.lesson-drawer-list h2 { font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: var(--brand-dark); margin: 6px 8px 8px; }
+.lesson-drawer-list ul { list-style: none; margin: 0 0 14px; padding: 0; }
+.lesson-drawer-list a { display: block; padding: 13px 14px; border-radius: 10px; color: #334155; text-decoration: none; font-weight: 600; overflow-wrap: normal; }
+.lesson-drawer-list a:hover { background: var(--brand-soft); color: var(--brand-dark); }
+.lesson-drawer-list a.active { background: var(--grad-brand); color: #fff; }
+#lesson-drawer { height: 72vh; border-radius: 20px 20px 0 0; }
+@media (max-width: 991.98px) {
+  .lesson-sidebar { display: none; }
+  body.has-lesson-bar { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .lesson-mobilebar {
+    display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 1040;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255,255,255,.97); border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 20px rgba(15,23,42,.08); backdrop-filter: blur(8px);
+  }
+  .lesson-mobilebar .btn { flex: 1 1 0; min-height: 48px; padding: .5rem; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+  .lesson-mobilebar .lesson-mb-list { flex: 1.5 1 0; }
+  .lesson-mobilebar .disabled { opacity: .45; pointer-events: none; }
+}
+@media (min-width: 992px) { #lesson-drawer { display: none !important; } }
+@media print { .lesson-mobilebar, #lesson-drawer { display: none !important; } }
