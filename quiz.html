@@ -1,41 +1,247 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Câu hỏi ôn tập HTML CSS và giải đáp">
-  <title>Ôn tập và FAQ | Learn Web – LVV UTB</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/logo.png" type="image/png" sizes="32x32" >
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Bỏ qua menu đến nội dung chính</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo-container">
-        <img class="logo" src="images/logo.jpg" alt="Learn Web – LVV UTB" width="48" height="48">
-        <a class="site-logo" href="index.html" aria-label="Learn Web – LVV UTB, về trang chủ">Learn Web <span>LVV UTB</span></a>
-      </div>
-      <nav class="site-nav" aria-label="Điều hướng chính">
-        <ul class="nav nav-list"><li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
-<li class="nav-item"><a class="nav-link" href="lessons.html">Lộ trình học</a></li>
-<li class="nav-item"><a class="nav-link" href="library.html">Thư viện mã</a></li>
-<li class="nav-item"><a class="nav-link" href="playground.html">Thực hành</a></li>
-<li class="nav-item"><a class="nav-link active" href="quiz.html" aria-current="page">Ôn tập & FAQ</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li></ul>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Câu hỏi ôn tập HTML CSS và giải đáp" name="description">
+    <title>Ôn tập và FAQ | Learn Web – LVV UTB</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body class="page-quiz">
+    <a class="skip-link" href="#main-content">Bỏ qua menu đến nội dung chính</a>
+    <header class="site-header">
+      <nav aria-label="Điều hướng chính" class="navbar navbar-expand-lg">
+        <div class="container">
+          <a aria-label="Learn Web – LVV UTB, về trang chủ" class="navbar-brand" href="index.html"><img alt="Logo Learn Web" class="brand-icon" src="images/logo.jpg" style="border-radius: 50%;"><span class="brand-name">Learn Web <small>LVV UTB</small></span></a>
+          <button aria-controls="primaryNav" aria-expanded="false" aria-label="Mở hoặc đóng menu" class="navbar-toggler" data-bs-target="#primaryNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="primaryNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+              <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+              <li class="nav-item"><a class="nav-link" href="lessons.html">Lộ trình học</a></li>
+              <li class="nav-item"><a class="nav-link" href="library.html">Thư viện mã</a></li>
+              <li class="nav-item"><a class="nav-link" href="playground.html">Thực hành</a></li>
+              <li class="nav-item"><a aria-current="page" class="nav-link active" href="quiz.html">Ôn tập &amp; FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </div>
-  </header>
-  <main id="main-content" class="site-main">
-    <section class="page-heading"><div class="container"><h1>Ôn tập kiến thức & FAQ</h1><p>10 câu hỏi mẫu để tự kiểm tra khái niệm HTML/CSS. Chức năng chấm điểm sẽ được bổ sung trong v0.4.</p></div></section><section class="page-section"><div class="container"><h2>Trắc nghiệm tổng hợp</h2><form id="quiz-form"><fieldset class="content-card mb-3"><legend class="h5">Câu 1. HTML dùng để làm gì?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-1" id="q1-0" value="0" disabled><label class="form-check-label" for="q1-0">Tạo cấu trúc nội dung</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-1" id="q1-1" value="1" disabled><label class="form-check-label" for="q1-1">Lưu dữ liệu trên máy chủ</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-1" id="q1-2" value="2" disabled><label class="form-check-label" for="q1-2">Thay thế hệ điều hành</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 2. Thẻ nào là tiêu đề cấp một?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-2" id="q2-0" value="0" disabled><label class="form-check-label" for="q2-0">&lt;h1&gt;</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-2" id="q2-1" value="1" disabled><label class="form-check-label" for="q2-1">&lt;header1&gt;</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-2" id="q2-2" value="2" disabled><label class="form-check-label" for="q2-2">&lt;title1&gt;</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 3. Thuộc tính nào mô tả nội dung ảnh?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-3" id="q3-0" value="0" disabled><label class="form-check-label" for="q3-0">alt</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-3" id="q3-1" value="1" disabled><label class="form-check-label" for="q3-1">href</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-3" id="q3-2" value="2" disabled><label class="form-check-label" for="q3-2">target</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 4. Thẻ nào chứa liên kết?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-4" id="q4-0" value="0" disabled><label class="form-check-label" for="q4-0">&lt;a&gt;</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-4" id="q4-1" value="1" disabled><label class="form-check-label" for="q4-1">&lt;p&gt;</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-4" id="q4-2" value="2" disabled><label class="form-check-label" for="q4-2">&lt;strong&gt;</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 5. CSS là viết tắt của gì?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-5" id="q5-0" value="0" disabled><label class="form-check-label" for="q5-0">Cascading Style Sheets</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-5" id="q5-1" value="1" disabled><label class="form-check-label" for="q5-1">Computer Styled Syntax</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-5" id="q5-2" value="2" disabled><label class="form-check-label" for="q5-2">Creative Site Structure</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 6. Selector .card chọn đối tượng nào?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-6" id="q6-0" value="0" disabled><label class="form-check-label" for="q6-0">Phần tử có class card</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-6" id="q6-1" value="1" disabled><label class="form-check-label" for="q6-1">Thẻ card</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-6" id="q6-2" value="2" disabled><label class="form-check-label" for="q6-2">Phần tử id card</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 7. Đơn vị nào thường dùng cho cỡ chữ tương đối?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-7" id="q7-0" value="0" disabled><label class="form-check-label" for="q7-0">rem</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-7" id="q7-1" value="1" disabled><label class="form-check-label" for="q7-1">kg</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-7" id="q7-2" value="2" disabled><label class="form-check-label" for="q7-2">ms</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 8. padding dùng để làm gì?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-8" id="q8-0" value="0" disabled><label class="form-check-label" for="q8-0">Tạo khoảng trống bên trong viền</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-8" id="q8-1" value="1" disabled><label class="form-check-label" for="q8-1">Tạo liên kết</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-8" id="q8-2" value="2" disabled><label class="form-check-label" for="q8-2">Đổi tên thẻ</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 9. display: flex có tác dụng gì?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-9" id="q9-0" value="0" disabled><label class="form-check-label" for="q9-0">Tạo bố cục flex</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-9" id="q9-1" value="1" disabled><label class="form-check-label" for="q9-1">Tạo bảng SQL</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-9" id="q9-2" value="2" disabled><label class="form-check-label" for="q9-2">Tải ảnh</label></div></fieldset><fieldset class="content-card mb-3"><legend class="h5">Câu 10. Media query thường dùng để làm gì?</legend><div class="form-check"><input class="form-check-input" type="radio" name="question-10" id="q10-0" value="0" disabled><label class="form-check-label" for="q10-0">Điều chỉnh giao diện theo điều kiện màn hình</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-10" id="q10-1" value="1" disabled><label class="form-check-label" for="q10-1">Gửi biểu mẫu lên server</label></div><div class="form-check"><input class="form-check-input" type="radio" name="question-10" id="q10-2" value="2" disabled><label class="form-check-label" for="q10-2">Tạo mật khẩu</label></div></fieldset><button id="submit-quiz" class="btn btn-primary" type="button" disabled>Chấm điểm (v0.4)</button> <button id="reset-quiz" class="btn btn-outline-secondary" type="reset" disabled>Làm lại (v0.4)</button><p id="quiz-result" role="status">Tính năng làm bài và chấm điểm sẽ được kích hoạt ở phiên bản v0.4.</p></form></div></section><section class="page-section" id="faq"><div class="container"><h2>Câu hỏi thường gặp</h2><div class="accordion" id="faq-accordion"><details class="faq-item"><summary>HTML có phải ngôn ngữ lập trình không?</summary><p>HTML là ngôn ngữ đánh dấu dùng để xác định cấu trúc và ý nghĩa nội dung trang web.</p></details><details class="faq-item"><summary>CSS có thay thế HTML được không?</summary><p>Không. HTML mô tả nội dung; CSS điều khiển cách nội dung được trình bày.</p></details><details class="faq-item"><summary>Tại sao ảnh không hiện?</summary><p>Kiểm tra thuộc tính src, đường dẫn file và tên tệp; vẫn cần alt để mô tả ảnh.</p></details><details class="faq-item"><summary>Tại sao CSS không áp dụng?</summary><p>Kiểm tra đường dẫn trong link, selector, cú pháp và độ ưu tiên của quy tắc CSS.</p></details><details class="faq-item"><summary>Class và id khác nhau thế nào?</summary><p>Class có thể sử dụng cho nhiều phần tử; id phải duy nhất trong một trang.</p></details><details class="faq-item"><summary>Làm sao học responsive?</summary><p>Bắt đầu bằng bố cục linh hoạt, Bootstrap Grid và thử trên màn hình nhỏ trước.</p></details></div></div></section>
-  </main>
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>Learn Web – LVV UTB</strong> · Website tự học HTML/CSS cho người mới.</p>
-      <nav aria-label="Liên kết chân trang" class="footer-nav"><a href="index.html">Trang chủ</a> <a href="lessons.html">Lộ trình học</a> <a href="library.html">Thư viện mã</a> <a href="playground.html">Thực hành</a> <a href="quiz.html">Ôn tập & FAQ</a> <a href="contact.html">Liên hệ</a></nav>
-      <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Không thu thập hoặc lưu trữ dữ liệu cá nhân.</p>
-    </div>
-  </footer>
-</body>
+    </header>
+    <main class="site-main" id="main-content">
+      <section class="page-heading">
+        <div class="container">
+          <h1>Ôn tập kiến thức &amp; FAQ</h1>
+          <p>10 câu hỏi mẫu để tự kiểm tra khái niệm HTML/CSS. Chức năng chấm điểm sẽ được bổ sung trong v0.4.</p>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="container">
+          <h2>Trắc nghiệm tổng hợp</h2>
+          <form id="quiz-form">
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 1. HTML dùng để làm gì?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q1-0" name="question-1" type="radio" value="0">
+                <label class="form-check-label" for="q1-0">Tạo cấu trúc nội dung</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q1-1" name="question-1" type="radio" value="1">
+                <label class="form-check-label" for="q1-1">Lưu dữ liệu trên máy chủ</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q1-2" name="question-1" type="radio" value="2">
+                <label class="form-check-label" for="q1-2">Thay thế hệ điều hành</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 2. Thẻ nào là tiêu đề cấp một?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q2-0" name="question-2" type="radio" value="0">
+                <label class="form-check-label" for="q2-0">&lt;h1&gt;</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q2-1" name="question-2" type="radio" value="1">
+                <label class="form-check-label" for="q2-1">&lt;header1&gt;</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q2-2" name="question-2" type="radio" value="2">
+                <label class="form-check-label" for="q2-2">&lt;title1&gt;</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 3. Thuộc tính nào mô tả nội dung ảnh?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q3-0" name="question-3" type="radio" value="0">
+                <label class="form-check-label" for="q3-0">alt</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q3-1" name="question-3" type="radio" value="1">
+                <label class="form-check-label" for="q3-1">href</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q3-2" name="question-3" type="radio" value="2">
+                <label class="form-check-label" for="q3-2">target</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 4. Thẻ nào chứa liên kết?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q4-0" name="question-4" type="radio" value="0">
+                <label class="form-check-label" for="q4-0">&lt;a&gt;</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q4-1" name="question-4" type="radio" value="1">
+                <label class="form-check-label" for="q4-1">&lt;p&gt;</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q4-2" name="question-4" type="radio" value="2">
+                <label class="form-check-label" for="q4-2">&lt;strong&gt;</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 5. CSS là viết tắt của gì?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q5-0" name="question-5" type="radio" value="0">
+                <label class="form-check-label" for="q5-0">Cascading Style Sheets</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q5-1" name="question-5" type="radio" value="1">
+                <label class="form-check-label" for="q5-1">Computer Styled Syntax</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q5-2" name="question-5" type="radio" value="2">
+                <label class="form-check-label" for="q5-2">Creative Site Structure</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 6. Selector .card chọn đối tượng nào?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q6-0" name="question-6" type="radio" value="0">
+                <label class="form-check-label" for="q6-0">Phần tử có class card</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q6-1" name="question-6" type="radio" value="1">
+                <label class="form-check-label" for="q6-1">Thẻ card</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q6-2" name="question-6" type="radio" value="2">
+                <label class="form-check-label" for="q6-2">Phần tử id card</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 7. Đơn vị nào thường dùng cho cỡ chữ tương đối?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q7-0" name="question-7" type="radio" value="0">
+                <label class="form-check-label" for="q7-0">rem</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q7-1" name="question-7" type="radio" value="1">
+                <label class="form-check-label" for="q7-1">kg</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q7-2" name="question-7" type="radio" value="2">
+                <label class="form-check-label" for="q7-2">ms</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 8. padding dùng để làm gì?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q8-0" name="question-8" type="radio" value="0">
+                <label class="form-check-label" for="q8-0">Tạo khoảng trống bên trong viền</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q8-1" name="question-8" type="radio" value="1">
+                <label class="form-check-label" for="q8-1">Tạo liên kết</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q8-2" name="question-8" type="radio" value="2">
+                <label class="form-check-label" for="q8-2">Đổi tên thẻ</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 9. display: flex có tác dụng gì?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q9-0" name="question-9" type="radio" value="0">
+                <label class="form-check-label" for="q9-0">Tạo bố cục flex</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q9-1" name="question-9" type="radio" value="1">
+                <label class="form-check-label" for="q9-1">Tạo bảng SQL</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q9-2" name="question-9" type="radio" value="2">
+                <label class="form-check-label" for="q9-2">Tải ảnh</label>
+              </div>
+            </fieldset>
+            <fieldset class="content-card mb-3 quiz-card">
+              <legend class="h5">Câu 10. Media query thường dùng để làm gì?</legend>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q10-0" name="question-10" type="radio" value="0">
+                <label class="form-check-label" for="q10-0">Điều chỉnh giao diện theo điều kiện màn hình</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q10-1" name="question-10" type="radio" value="1">
+                <label class="form-check-label" for="q10-1">Gửi biểu mẫu lên server</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" disabled="" id="q10-2" name="question-10" type="radio" value="2">
+                <label class="form-check-label" for="q10-2">Tạo mật khẩu</label>
+              </div>
+            </fieldset>
+            <button class="btn btn-primary" disabled="" id="submit-quiz" type="button">Chấm điểm (v0.4)</button>
+            <button class="btn btn-outline-secondary" disabled="" id="reset-quiz" type="reset">Làm lại (v0.4)</button>
+            <p id="quiz-result" role="status">Tính năng làm bài và chấm điểm sẽ được kích hoạt ở phiên bản v0.4.</p>
+          </form>
+        </div>
+      </section>
+      <section class="page-section" id="faq">
+        <div class="container">
+          <h2>Câu hỏi thường gặp</h2>
+          <div class="accordion" id="faq-accordion">
+            <details class="faq-item accordion-look">
+              <summary>HTML có phải ngôn ngữ lập trình không?</summary>
+              <p>HTML là ngôn ngữ đánh dấu dùng để xác định cấu trúc và ý nghĩa nội dung trang web.</p>
+            </details>
+            <details class="faq-item accordion-look">
+              <summary>CSS có thay thế HTML được không?</summary>
+              <p>Không. HTML mô tả nội dung; CSS điều khiển cách nội dung được trình bày.</p>
+            </details>
+            <details class="faq-item accordion-look">
+              <summary>Tại sao ảnh không hiện?</summary>
+              <p>Kiểm tra thuộc tính src, đường dẫn file và tên tệp; vẫn cần alt để mô tả ảnh.</p>
+            </details>
+            <details class="faq-item accordion-look">
+              <summary>Tại sao CSS không áp dụng?</summary>
+              <p>Kiểm tra đường dẫn trong link, selector, cú pháp và độ ưu tiên của quy tắc CSS.</p>
+            </details>
+            <details class="faq-item accordion-look">
+              <summary>Class và id khác nhau thế nào?</summary>
+              <p>Class có thể sử dụng cho nhiều phần tử; id phải duy nhất trong một trang.</p>
+            </details>
+            <details class="faq-item accordion-look">
+              <summary>Làm sao học responsive?</summary>
+              <p>Bắt đầu bằng bố cục linh hoạt, Bootstrap Grid và thử trên màn hình nhỏ trước.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p><strong>Learn Web – LVV UTB</strong> · Website tự học HTML/CSS cho người mới.</p>
+        <nav aria-label="Liên kết chân trang" class="footer-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="lessons.html">Lộ trình học</a>
+          <a href="library.html">Thư viện mã</a>
+          <a href="playground.html">Thực hành</a>
+          <a href="quiz.html">Ôn tập &amp; FAQ</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+        <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Không thu thập hoặc lưu trữ dữ liệu cá nhân.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
