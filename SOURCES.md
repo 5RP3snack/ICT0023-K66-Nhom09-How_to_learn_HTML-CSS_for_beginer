@@ -1,4 +1,32 @@
 ##Các nguồn tham khảo:
 - Sử dụng chat GPT để hỗ trợ học, lên ý tưởng và design một số màu sắc, khung, và nhận xét website qua từng giai đoạn.
 - Nguồn tìm kiếm kiến thức chính: https://www.w3schools.com/
-- 
+- HTML cơ bản và cấu trúc tài liệu — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+- Tiêu đề và đoạn văn — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
+- Liên kết trong HTML — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links
+- Hình ảnh và thuộc tính src, alt — MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img
+- Danh sách trong HTML — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Lists
+- Bảng dữ liệu HTML — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
+- Biểu mẫu và nút bấm HTML — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_forms
+- HTML Semantic và bố cục tài liệu — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Structuring_documents
+- Nhãn biểu mẫu và liên kết for/id — MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/label
+- Vùng nhập văn bản textarea — MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea
+- Khung nhúng iframe — MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe
+- Khái niệm và vai trò của CSS — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
+- Cách sử dụng CSS ngoài, CSS trong và CSS trực tiếp — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Getting_started
+- Bộ chọn CSS theo thẻ, class và id — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
+- Thuộc tính màu chữ color — MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/color
+- Định dạng văn bản, phông chữ và cỡ chữ — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
+- Màu nền, đường viền và bo góc — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders
+- CSS Box Model: content, padding, border, margin — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model
+- Bố cục Flexbox — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox
+- Thiết kế responsive và media queries — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
+- CSS Grid và thuộc tính grid-template-columns — MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns
+- Trạng thái tương tác khi trỏ chuột :hover — MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:hover
+- Xử lý xung đột, độ ưu tiên và kế thừa trong CSS — MDN: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts
+- Hướng dẫn sử dụng Bootstrap 5.3 — Bootstrap: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+- Hệ thống lưới responsive — Bootstrap: https://getbootstrap.com/docs/5.3/layout/grid/
+- Thiết kế biểu mẫu — Bootstrap: https://getbootstrap.com/docs/5.3/forms/overview/
+# Thư viện được khai báo trong các file HTML
+- Bootstrap CSS 5.3.3 qua jsDelivr: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+- Bootstrap JavaScript Bundle 5.3.3 qua jsDelivr: https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
