@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Góp ý mô phỏng cho dự án Learn Web" name="description">
+    <meta content="Gửi góp ý cho dự án Learn Web" name="description">
     <title>Liên hệ và phản hồi | Learn Web – LVV UTB</title>
     <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +33,7 @@
       <section class="page-heading">
         <div class="container">
           <h1>Liên hệ &amp; phản hồi</h1>
-          <p>Hãy chia sẻ ý kiến về nội dung học tập và trải nghiệm sử dụng. Đây là form mô phỏng; dữ liệu không được gửi đi hoặc lưu trữ.</p>
+          <p>Hãy chia sẻ ý kiến về nội dung học tập và trải nghiệm sử dụng. Góp ý của bạn sẽ được chuyển qua dịch vụ email đến nhóm phát triển Learn Web.</p>
         </div>
       </section>
       <section class="page-section">
@@ -43,9 +43,9 @@
               <h2>Góp ý cho Learn Web</h2>
               <form id="feedback-form" novalidate="">
                 <div class="mb-3">
-                  <label class="form-label" for="feedback-name">Tên hiển thị (bí danh hoặc dữ liệu mẫu) *</label>
+                  <label class="form-label" for="feedback-name">Tên hiển thị (có thể dùng bí danh) *</label>
                   <input class="form-control" id="feedback-name" maxlength="60" name="name" placeholder="Ví dụ: Người học A" required="" type="text">
-                  <p class="form-text">Không nhập họ tên hoặc thông tin nhận dạng thật.</p>
+                  <p class="form-text">Bạn có thể dùng bí danh. Không chia sẻ thông tin nhạy cảm.</p>
                   <p aria-live="polite" class="field-error" id="name-error"></p>
                 </div>
                 <div class="mb-3">
@@ -55,14 +55,15 @@
                 </div>
                 <div class="mb-3">
                   <label class="form-label" for="feedback-message">Nội dung góp ý *</label>
-                  <textarea class="form-control" id="feedback-message" maxlength="500" minlength="10" name="message" placeholder="Hãy ghi góp ý bằng dữ liệu mẫu, tối thiểu 10 ký tự" required="" rows="6"></textarea>
+                  <textarea class="form-control" id="feedback-message" maxlength="500" minlength="10" name="message" placeholder="Nhập nội dung góp ý, tối thiểu 10 ký tự" required="" rows="6"></textarea>
                   <p aria-live="polite" class="field-error" id="message-error"></p>
                 </div>
+                <div class="visually-hidden" aria-hidden="true"><label for="feedback-website">Để trống trường này</label><input id="feedback-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-primary" id="submit-feedback" type="button">Kiểm tra phản hồi</button>
+                  <button class="btn btn-primary" id="submit-feedback" type="submit">Gửi góp ý</button>
                   <button class="btn btn-outline-secondary" type="reset">Xóa dữ liệu</button>
                 </div>
-                <p id="feedback-status" role="status">Phản hồi chỉ được kiểm tra và hiển thị trên thiết bị này; không gửi hoặc lưu.</p>
+                <p id="feedback-status" role="status">Biểu mẫu gửi góp ý qua email; vui lòng không cung cấp thông tin nhạy cảm.</p>
               </form>
             </div>
             <div class="col-12 col-lg-5">
@@ -71,7 +72,7 @@
                 <p><strong>Learn Web – LVV UTB</strong> được phát triển bởi nhóm sinh viên K66 trong học phần ICT0023.</p>
                 <p>Mục tiêu: tạo môi trường thực hành HTML/CSS dễ tiếp cận và hoàn toàn hoạt động trên trình duyệt.</p>
                 <h3>Quy tắc dữ liệu</h3>
-                <p>Không nhập email, số điện thoại hoặc thông tin cá nhân thật. Website không lưu hoặc gửi bất kỳ nội dung phản hồi nào.</p>
+                <p>Nội dung bạn nhập sẽ được chuyển đến hộp thư của nhóm qua dịch vụ email. Không nhập mật khẩu, số điện thoại hoặc thông tin nhạy cảm. Website không lưu góp ý trong cơ sở dữ liệu.</p>
               </aside>
             </div>
           </div>
@@ -89,7 +90,7 @@
           <a href="quiz.html">Ôn tập &amp; FAQ</a>
           <a href="contact.html">Liên hệ</a>
         </nav>
-        <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Không thu thập hoặc lưu trữ dữ liệu cá nhân.</p>
+        <p class="small">Dự án học phần ICT0023 – K66. Kết quả học tập và công cụ chỉ mang tính tham khảo. Biểu mẫu liên hệ gửi nội dung qua dịch vụ email bên thứ ba; không lưu dữ liệu trong cơ sở dữ liệu của website.</p>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

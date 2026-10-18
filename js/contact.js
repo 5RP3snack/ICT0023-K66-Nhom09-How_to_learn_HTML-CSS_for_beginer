@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const topic = document.getElementById("feedback-topic");
   const message = document.getElementById("feedback-message");
   const status = document.getElementById("feedback-status");
+  const button = document.getElementById("submit-feedback");
+  const website = document.getElementById("feedback-website");
   const fields = [
     { input: name, error: document.getElementById("name-error") },
     { input: topic, error: document.getElementById("topic-error") },
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const displayName = name.value.trim();
     const feedback = message.value.trim();
     const errors = [
-      !displayName ? "Vui lòng nhập bí danh." : displayName.length < 2 ? "Bí danh phải có ít nhất 2 ký tự." : "",
+      !displayName ? "Vui lòng nhập tên hiển thị." : displayName.length < 2 ? "Tên hiển thị phải có ít nhất 2 ký tự." : "",
       !topic.value ? "Vui lòng chọn chủ đề." : "",
       !feedback ? "Vui lòng nhập góp ý." : feedback.length < 10 ? "Góp ý phải có ít nhất 10 ký tự." : ""
     ];
@@ -30,20 +32,39 @@ document.addEventListener("DOMContentLoaded", () => {
     return invalidIndex < 0;
   }
 
-  document.getElementById("submit-feedback").addEventListener("click", () => {
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
     if (!validate()) {
       status.textContent = "Thông tin chưa hợp lệ. Hãy kiểm tra các trường được đánh dấu.";
       return;
     }
-    status.textContent = `Phản hồi mẫu hợp lệ: ${message.value.trim().length} ký tự, thuộc chủ đề ${topic.options[topic.selectedIndex].text}. Không có dữ liệu nào được gửi hoặc lưu.`;
+    button.disabled = true;
+    button.textContent = "Đang gửi...";
+    status.textContent = "Đang chuyển góp ý đến hệ thống email...";
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.value.trim(), topic: topic.value, message: message.value.trim(), website: website.value })
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error(result.message || "Không thể gửi góp ý.");
+      form.reset();
+      fields.forEach(field => showError(field, ""));
+      status.textContent = result.message;
+    } catch (error) {
+      status.textContent = error.message || "Có lỗi xảy ra. Vui lòng thử lại.";
+    } finally {
+      button.disabled = false;
+      button.textContent = "Gửi góp ý";
+    }
   });
+
   fields.forEach(field => field.input.addEventListener("input", () => {
     if (field.error.textContent) showError(field, "");
   }));
-  form.addEventListener("reset", () => {
-    requestAnimationFrame(() => {
-      fields.forEach(field => showError(field, ""));
-      status.textContent = "Dữ liệu đã được xóa. Phản hồi chỉ là mô phỏng.";
-    });
-  });
+  form.addEventListener("reset", () => requestAnimationFrame(() => {
+    fields.forEach(field => showError(field, ""));
+    status.textContent = "Biểu mẫu đã được xóa.";
+  }));
 });
