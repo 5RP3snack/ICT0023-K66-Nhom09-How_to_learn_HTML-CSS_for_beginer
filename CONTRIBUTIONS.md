@@ -23,16 +23,18 @@ Mỗi trang có một `h1`. Các phần lớn là `section.page-section` có `h2
 - `field-error`, `code-input`, `preview-frame`, `faq-item`: thành phần theo chức năng.
 
 ## ID (duy nhất mỗi trang, phục vụ JavaScript sau này)
-- Chung: `main-content`.
-- Library: `snippet-filter-form`, `snippet-search`, `snippet-topic`, `snippet-level`, `snippet-list`, `snippet-empty`.
-- Playground: `playground-form`, `html-editor`, `css-editor`, `run-code`, `load-sample`, `reset-code`, `preview-frame`, `playground-message`.
-- Quiz: `quiz-form`, `submit-quiz`, `reset-quiz`, `quiz-result`, `faq-accordion`, `q1-0`...`q10-2`.
-- Contact: `feedback-form`, `feedback-name`, `feedback-topic`, `feedback-message`, `submit-feedback`, `feedback-status`, `name-error`, `topic-error`, `message-error`.
+- Chung:`main-content`, `primary-nav`.
+- Trang chủ:`project-info-modal`, `project-info-title`.
+- Lộ trình học:`html-lessons`, `css-lessons`, `sample-lesson`.
+- Library:`snippet-filter-form`, `snippet-search`, `snippet-topic`, `snippet-level`, `snippet-list`, `snippet-empty`.
+- Playground:`playground-form`, `html-editor`, `css-editor`, `run-code`, `load-sample`, `reset-code`, `preview-title`, `preview-frame`, `playground-message`.
+- Quiz:`quiz-form`, `submit-quiz`, `reset-quiz`, `quiz-result`, `faq`, `faq-accordion`, và `q1-0` đến `q10-2`.
+- Contact:`feedback-form`, `feedback-name`, `feedback-topic`, `feedback-message`, `submit-feedback`, `feedback-status`, `name-error`, `topic-error`, `message-error`.
 
 ## Quy định
-- Dùng kebab-case cho `class`, `id`, tên file; không đặt ID lặp trên cùng trang.
-- Mỗi input có `label for` trỏ tới `id`, mỗi ảnh phải có `alt`, mỗi bảng có `caption` và tiêu đề cột.
-- Link dùng đường dẫn tương đối để hoạt động ở GitHub Pages trong repository con.
-- Chỉ tạo JS tương tác ở v0.4; ở v0.2 các chức năng chưa triển khai được đánh dấu `disabled` thay vì nút giả.
-- Không dùng localStorage, sessionStorage, cookie hoặc gửi dữ liệu người dùng.
-- Phân biệt rõ Bootstrap Grid và CSS tùy chỉnh: v0.2 chỉ có CSS đọc nội dung tối thiểu.
+- Đặt tên: ID, class bổ sung theo `kebab-case`. Các ID navbar và modal đã được chuẩn hóa; các thuộc tính `aria-controls`, `aria-labelledby`, `data-bs-target` liên quan cũng cập nhật đồng bộ. Tên file HTML là chữ thường, kebab-case.
+- Khả năng truy cập: input/select/textarea có `label for` tương ứng với `id`; ảnh có `alt`; bảng dữ liệu hiển thị có `caption` và tiêu đề cột `th`.
+- Đường dẫn: link điều hướng dùng tên file tương đối, phù hợp GitHub Pages trong repository con. Cần giữ đúng tên file triển khai trên GitHub.
+- JavaScript theo phiên bản: Chưa thêm JavaScript nghiệp vụ, áp dụng đối với bản v0.4. Các nút chạy thử, lọc thư viện, chấm điểm và kiểm tra phản hồi chưa triển khai vẫn `disabled` như bản gốc. Bootstrap bundle hiện có vẫn hỗ trợ menu và modal; FAQ dùng `details` thuần HTML.
+- Quy tắc dữ liệu: Không thêm `localStorage`, `sessionStorage`, cookie hay chức năng gửi dữ liệu người dùng. Biểu mẫu liên hệ chỉ mô phỏng.
+- Bootstrap Grid và CSS: Dùng `row` và `col-*` cho bố cục; CSS tùy chỉnh được giữ ở `css/style.css` 
